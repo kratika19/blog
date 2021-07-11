@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Patrick+Hand&family=Satisfy&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+nav{
+    position:fixed;
+    top:0;
+}
+
+nav .nav-wrapper{
+    background-color:darkred;
+}
+
+nav .nav-wrapper .brand-logo{
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    padding-left: 1vw;
+}

@@ -1,0 +1,22 @@
+{% extends 'blogs/base.html' %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}?{% now "U" %}">
+{% endblock %}
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    <div class="main-container">
+        <div class="home-container">
+            <div class="home-content">
+                <h1>Welcome to <span>blogs-for-us</span></h1>
+                <h6>(A blog service started by students at NITH)</h6>
+                <p>A place where you will get a collection of blogs regarding college life at NITH, activities, studies, fests and much more by the Alumni and Students of NITH.</p>
+                <a href="#"><button>GET STARTED</button></a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
