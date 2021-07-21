@@ -1,0 +1,29 @@
+main {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.logout a {
+    margin-top: 4rem;
+    text-decoration: none;
+}
+
+.logout button {
+    padding: 10px;
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+    background-color: transparent;
+    border: 2px solid;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logout button:hover,
+.logout button:active {
+    color: darkred;
+    border: 2px solid;
+}

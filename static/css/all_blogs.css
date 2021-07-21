@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Patrick+Hand&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+
 #all-blogs {
     margin: 5rem auto;
 }
 
 #all-blogs h1 {
     text-align: center;
-    font-size: 2rem;
     color: #2e2e2e;
-    margin: 3rem 0;
+    margin: 8rem 0 3rem 0;
+    font-family: 'Satisfy', cursive;
 }
 
 .grid {
@@ -22,6 +25,7 @@
     max-width: 95%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     margin: 1rem;
+    border-radius: 0 0 12px 12px;
 }
 
 .img-container {
@@ -38,12 +42,18 @@
     flex-direction: column;
     padding: 0 2rem 2rem;
     justify-content: center;
-    text-align: justify;
+    text-align: center;
 }
 
-.btn-wrapper{
+.card-contents h4 {
+    color: darkred;
+    font-family: 'Otomanopee One', sans-serif;
+}
+
+.btn-wrapper {
     margin-top: 1rem;
 }
+
 .btn-wrapper a {
     text-decoration: none;
     margin-top: 2rem;
@@ -54,6 +64,7 @@
     font-weight: 700;
     font-size: 15px;
     outline: none;
+    color: darkred;
     border: 2px solid;
     padding: 10px;
     border-radius: 2px;
@@ -61,100 +72,6 @@
 }
 
 .btn-wrapper a button:hover {
-    color: darkred;
+    color: black;
     border: 2px solid;
 }
-
-/*.card__actions {*/
-/*    padding: 1rem;*/
-/*    text-align: center;*/
-/*}*/
-
-/*.card__actions button,*/
-/*.card__actions a {*/
-/*    margin: 0 0.25rem;*/
-/*}*/
-
-/*.product-item {*/
-/*    width: 20rem;*/
-/*    max-width: 95%;*/
-/*}*/
-
-/*.product__title {*/
-/*    font-size: 1.2rem;*/
-/*    text-align: center;*/
-/*}*/
-
-/*.product__price {*/
-/*    text-align: center;*/
-/*    color: #4d4d4d;*/
-/*    margin-bottom: 0.5rem;*/
-/*}*/
-
-/*.product__description {*/
-/*    text-align: center;*/
-/*}*/
-
-/*.cards-container {*/
-/*	break-inside: avoid;*/
-/*}*/
-
-/*.cards-container .card {*/
-/*	transform: translateZ(0);*/
-/*	display: inline-block;*/
-/*	overflow: visible;*/
-/*}*/
-
-/*.cards-container .card .material-icons {*/
-/*	z-index: 5;*/
-/*}*/
-
-/*@media only screen and (max-width: 600px) {*/
-/*	.cards-container {*/
-/*		-webkit-column-count: 1;*/
-/*		-moz-column-count: 1;*/
-/*		column-count: 1;*/
-/*	}*/
-/*}*/
-
-/*@media only screen and (min-width: 601px) {*/
-/*	.cards-container {*/
-/*		-webkit-column-count: 2;*/
-/*		-moz-column-count: 2;*/
-/*		column-count: 2;*/
-/*	}*/
-/*}*/
-
-/*@media only screen and (min-width: 993px) {*/
-/*	.cards-container {*/
-/*		-webkit-column-count: 3;*/
-/*		-moz-column-count: 3;*/
-/*		column-count: 3;*/
-/*	}*/
-/*}*/
-
-/*.text-center {*/
-/*	text-align: center;*/
-/*}*/
-
-/*#all-blogs ul {*/
-/*list-style: none;*/
-/*margin: 0;*/
-/*padding: 0;*/
-/*!*display: grid;*!*/
-/*!*grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));*!*/
-/*!*gap: 2px;*!*/
-/*}*/
-
-/*.post img {*/
-/*width: 7rem;*/
-/*height: 7rem;*/
-/*}*/
-
-/*.post a {*/
-/*height: 22rem;*/
-/*transform-origin: center;*/
-/*box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);*/
-/*border-radius: 12px;*/
-/*background-color: white;*/
-/*}*/

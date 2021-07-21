@@ -1,11 +1,18 @@
 {% extends 'blogs/base.html' %}
 {% load static %}
+{% block title %}
+    Logged out
+{% endblock %}
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'css/logout.css' %}?{% now "U" %}">
+{% endblock %}
 {% block content %}
-    <div class="logout">
-        <h2>You are logged Out Successfully</h2>
-
-        <small class="text-muted"
-        ><a class="btn btn-danger" href="{% url 'login' %}">Log In Again</a>
-        </small>
-    </div>
+    <main>
+        <div class="logout">
+            <h2>You are logged Out Successfully!!</h2>
+            <a href="{% url 'login' %}">
+                <button>Login Again</button>
+            </a>
+        </div>
+    </main>
 {% endblock %}

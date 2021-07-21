@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Patrick+Hand&family=Satisfy&display=swap');
+
 main {
     background-color: #ffd0d0;
     position: relative;
@@ -11,6 +13,11 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.content h1, h2 {
+    margin-top: 4rem;
+    font-family: 'Satisfy', cursive;
 }
 
 form {
@@ -39,7 +46,7 @@ form {
     font-size: 1.2rem;
     color: #fff;
     padding: 0.7rem 0;
-    letter-spacing:1.2px;
+    letter-spacing: 1.2px;
 }
 
 .form-control input, .form-control textarea {
@@ -56,30 +63,38 @@ form {
 }
 
 .form-control input:focus,
-.form-control textarea:focus{
+.form-control textarea:focus {
     outline: none !important;
     box-shadow: none;
 }
 
-.btn-wrapper{
+.btn-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    flex-direction: column;
 }
-.btn-wrapper button{
+
+.btn-wrapper button {
     padding: 10px 12px;
     background: none;
-    outline:none;
+    outline: none;
     border: 2px solid black;
     cursor: pointer;
     font-size: 16px;
     border-radius: 6px;
     letter-spacing: 1.2px;
     font-weight: bold;
+    margin-bottom: 1rem;
 }
 
 .btn-wrapper button:hover,
-.btn-wrapper button:active{
+.btn-wrapper button:active {
     border: 2px solid darkred;
     color: darkred;
+}
+
+.btn-wrapper a{
+    color: darkred;
+    font-weight: bold;
 }

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Patrick+Hand&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+
 main {
     margin: 0;
     padding: 0;
@@ -33,10 +36,14 @@ main {
     flex-direction: column;
     text-align: right;
 }
-.blog-title h1{
+
+.blog-title h1 {
     font-size: 5rem;
+    font-family: 'Otomanopee One', sans-serif;
+    color:darkred;
 }
-.credit{
+
+.credit {
     font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 1.5px;
@@ -66,7 +73,7 @@ main {
     box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-.content-container p{
+.content-container p {
     font-size: 1.1rem;
     letter-spacing: 1px;
 }

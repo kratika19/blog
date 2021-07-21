@@ -12,7 +12,7 @@
 {% block content %}
     <main>
         <section class="content">
-        <h2>Create Your Account</h2>
+            <h2>~ Create Your Account ~</h2>
             <form action="{% url 'register' %}" method="POST" class="my-form">
                 {% csrf_token %}
                 {% for field in form %}
@@ -24,6 +24,8 @@
                 {% endfor %}
                 <div class="btn-wrapper">
                     <button type="submit">Register</button>
+                    <p>Already have an account? <a href="{% url 'login' %}">Login here!</a></p>
+
                 </div>
             </form>
         </section>

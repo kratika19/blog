@@ -11,7 +11,7 @@
 {% block content %}
     <main>
         <section class="content">
-            <h1>Write your blog</h1>
+            <h1>~ Write a blog ~</h1>
             <form action="{% url 'write_blog' %}" method="POST" class="my-form">
                 {% csrf_token %}
                 {% for field in form %}

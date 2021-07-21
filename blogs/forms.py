@@ -19,4 +19,4 @@ class BlogForm(forms.ModelForm):
 class UserRegistrationsForm(UserCreationForm):
     class Meta:
         model = User
-        fields = ['username', 'password1', 'password2']
+        fields = ['username', 'email', 'password1', 'password2']

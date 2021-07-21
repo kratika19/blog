@@ -21,14 +21,31 @@
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="{% url 'all-blogs' %}">All Blogs</a></li>
-                <li><a href="#">Create</a></li>
+                <li><a href="{% url 'write_blog' %}">Write a Blog</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'register' %}">Register</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                {% endif %}
             </ul>
         </div>
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
+        <li><a href="{% url 'home' %}" class="brand-logo">blogs-for-us</a>
+        </li>
+        <li><a href="{% url 'home' %}">Home</a></li>
         <li><a href="{% url 'all-blogs' %}">All blogs</a></li>
-        <li><a href="#">Create</a></li>
+        <li><a href="{% url 'write_blog' %}">Write a Blog</a></li>
+        {% if user.is_authenticated %}
+            <li><a href="#">Profile</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+        {% else %}
+            <li><a href="{% url 'register' %}">Register</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+        {% endif %}
     </ul>
 </div>
 
@@ -40,25 +57,23 @@
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
-                    content.</p>
+                <h5 class="white-text">blogs-for-us</h5>
+                <p class="grey-text text-lighten-4">A blog service started by students at NITH for the students of
+                    NITH.</p>
             </div>
             <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Links</h5>
                 <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    <li><a class="grey-text text-lighten-3" href="{% url 'home' %}">Home</a></li>
+                    <li><a class="grey-text text-lighten-3" href="{% url 'all-blogs' %}">Read all Blogs</a></li>
+                    <li><a class="grey-text text-lighten-3" href="{% url 'write_blog' %}">Write a Blog</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="footer-copyright">
         <div class="container">
-            © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            Kratika Mittal © 2021 All rights reserved.
         </div>
     </div>
 </footer>
