@@ -11,7 +11,6 @@ def home(request):
     return render(request, './blogs/index.html')
 
 
-@login_required
 def all_blogs(request):
     blogs = Blog.objects.all()
     return render(request, 'blogs/all_blogs.html', {
@@ -58,7 +57,14 @@ def register(request):
 
         if form.is_valid():
             form.save()
+            print('Form', form)
+            username = form.cleaned_data.get('username')
+            print(f'Account successfully created for {username}!!')
             return redirect('login')
+        else:
+            return render(request, 'blogs/register.html', {
+                'form': form
+            })
     else:
         form = UserRegistrationsForm()
         return render(request, 'blogs/register.html', {
