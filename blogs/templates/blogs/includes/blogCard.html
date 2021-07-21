@@ -1,0 +1,21 @@
+{% load static %}
+
+<div class="card">
+    <div class="img-container">
+        <img src="{% static 'images/bg1.jpg' %}" alt="#">
+    </div>
+    <div class="card-contents">
+        <div class="title">
+            <h4>{{ blog.title }}</h4>
+        </div>
+        <div class="excerpt">
+            <p>{{ blog.excerpt }}</p>
+        </div>
+        <div class="btn-wrapper">
+            <a href="#">
+                <button>Read More!</button>
+            </a>
+        </div>
+    </div>
+</div>
+
