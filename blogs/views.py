@@ -13,3 +13,10 @@ def all_blogs(request):
     return render(request, 'blogs/all_blogs.html', {
         'blogs': blogs,
     })
+
+
+def detail_blogs(request, pk):
+    blog = Blog.objects.get(id=pk)
+    return render(request, 'blogs/detail_blog.html', {
+        'blog': blog
+    })

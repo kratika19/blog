@@ -10,6 +10,8 @@ class Blog(models.Model):
     author = models.CharField(max_length=200)
     # image = models.ImageField(upload_to='posts', null=True)
     date = models.DateField(auto_now=True)
-    slug = models.SlugField(unique=True, db_index=True)
     content = models.TextField(validators=[MinLengthValidator(10)])
     # author = models.ForeignKey(Author, null=True, on_delete=models.SET_NULL, related_name='posts')
+
+    def __str__(self):
+        return self.title

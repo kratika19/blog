@@ -12,7 +12,7 @@
             <p>{{ blog.excerpt }}</p>
         </div>
         <div class="btn-wrapper">
-            <a href="#">
+            <a href="{% url 'detail_blogs' blog.id %}">
                 <button>Read More!</button>
             </a>
         </div>
