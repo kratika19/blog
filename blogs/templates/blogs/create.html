@@ -1,0 +1,30 @@
+{% extends 'blogs/base.html' %}
+{% load static %}
+
+{% block title %}
+    Write a blog
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'css/create.css' %}?{% now "U" %}">
+{% endblock %}
+{% block content %}
+    <main>
+        <section class="content">
+            <h1>Write your blog</h1>
+            <form action="#" class="my-form">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="form-control {% if field.errors %}invalid{% endif %}">
+                        {{ field.label_tag }}
+                        {{ field }}
+                        {{ field.errors }}
+                    </div>
+                {% endfor %}
+                <div class="btn-wrapper">
+                    <button type="submit">SUBMIT</button>
+                </div>
+            </form>
+        </section>
+    </main>
+{% endblock %}

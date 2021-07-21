@@ -60,6 +60,14 @@
     }
 }
 
+.btn-wrapper{
+    margin-top:2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 .home-content a {
     text-decoration: none;
     margin-top: 2rem;
@@ -78,6 +86,7 @@
     border-radius: 10px;
     cursor: pointer;
     letter-spacing: 1.2px;
+    margin: 0 1rem;
 }
 
 .home-content a button:hover {

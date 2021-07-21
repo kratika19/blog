@@ -1,0 +1,85 @@
+main {
+    background-color: #ffd0d0;
+    position: relative;
+    top: 1rem;
+    height: 100%;
+    padding: 2rem;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form {
+    margin: 2rem 1rem;
+    padding: 2rem 1rem;
+    /*border: 1px solid black;*/
+    border-radius: 8px;
+    width: 80rem;
+    max-width: 95%;
+    background: #DE6262; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #FFB88C, #DE6262); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-control {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.form-control label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-size: 1.2rem;
+    color: #fff;
+    padding: 0.7rem 0;
+    letter-spacing:1.2px;
+}
+
+.form-control input, .form-control textarea {
+    display: block;
+    width: 100%;
+    font: inherit;
+    border-radius: 6px;
+    border: 1px solid #000 !important;
+    padding: 4px 0 4px 10px !important;
+}
+
+.form-control textarea {
+    height: 40vh;
+}
+
+.form-control input:focus,
+.form-control textarea:focus{
+    outline: none !important;
+    box-shadow: none;
+}
+
+.btn-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-wrapper button{
+    padding: 10px 12px;
+    background: none;
+    outline:none;
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 6px;
+    letter-spacing: 1.2px;
+    font-weight: bold;
+}
+
+.btn-wrapper button:hover,
+.btn-wrapper button:active{
+    border: 2px solid darkred;
+    color: darkred;
+}
