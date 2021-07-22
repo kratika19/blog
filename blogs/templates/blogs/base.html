@@ -23,7 +23,7 @@
                 <li><a href="{% url 'all-blogs' %}">All Blogs</a></li>
                 <li><a href="{% url 'write_blog' %}">Write a Blog</a></li>
                 {% if user.is_authenticated %}
-                    <li><a href="{% url 'profile' %}">Profile</a></li>
+                    <li><a href="{% url 'profile' %}">My Blogs</a></li>
                     <li><a href="{% url 'logout' %}">Logout</a></li>
                 {% else %}
                     <li><a href="{% url 'register' %}">Register</a></li>
@@ -40,7 +40,7 @@
         <li><a href="{% url 'all-blogs' %}">All blogs</a></li>
         <li><a href="{% url 'write_blog' %}">Write a Blog</a></li>
         {% if user.is_authenticated %}
-            <li><a href="{% url 'profile' %}">Profile</a></li>
+            <li><a href="{% url 'profile' %}">My Blogs</a></li>
             <li><a href="{% url 'logout' %}">Logout</a></li>
         {% else %}
             <li><a href="{% url 'register' %}">Register</a></li>
@@ -65,7 +65,6 @@
                 <h5 class="white-text">Links</h5>
                 <ul>
                     <li><a class="grey-text text-lighten-3" href="{% url 'home' %}">Home</a></li>
-                    <li><a class="grey-text text-lighten-3" href="{% url 'profile' %}">Profile</a></li>
                     <li><a class="grey-text text-lighten-3" href="{% url 'all-blogs' %}">Read all Blogs</a></li>
                     <li><a class="grey-text text-lighten-3" href="{% url 'write_blog' %}">Write a Blog</a></li>
                 </ul>

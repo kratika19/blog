@@ -1,31 +1,27 @@
 {% extends 'blogs/base.html' %}
-
+{% load static %}
 {% block title %}
     Profile
 {% endblock %}
 
 {% block css_files %}
-    <link rel="stylesheet" href="#">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/all_blogs.css' %}?{% now "U" %}">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}?{% now "U" %}">
 {% endblock %}
 
 {% block content %}
     <main>
         <div class="profile-page">
             <div class="profile-heading">
-                <h1>~ Your Profile ~</h1>
-            </div>
-            <div class="profile-intro">
-                <p>Name : {{ request.user | capfirst }}</p>
-                <p>Email : {{ request.user.email }}</p>
+                <h1>~ Blogs by {{ request.user | capfirst }} ~</h1>
             </div>
             <div class="profile-content">
-                <h1>Your Blogs</h1>
-                <ul>
+                <div class="grid">
                     {% for blog in blogs %}
-                        <li>{{ blog.title | capfirst }}</li>
+                        {% include 'blogs/includes/blogCard.html' %}
                     {% endfor %}
-
-                </ul>
+                </div>
 
             </div>
         </div>

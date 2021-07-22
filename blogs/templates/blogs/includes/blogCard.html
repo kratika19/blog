@@ -15,6 +15,11 @@
             <a href="{% url 'detail_blogs' blog.id %}">
                 <button>Read More!</button>
             </a>
+            {% if request.user == blog.author %}
+                <a href="{% url 'delete_blog' blog.id %}">
+                    <button>Delete Blog</button>
+                </a>
+            {% endif %}
         </div>
     </div>
 </div>

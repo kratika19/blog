@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Patrick+Hand&family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
 
-#all-blogs {
-    margin: 5rem auto;
+#all-blogs, .profile-page {
+    margin: 3rem auto;
 }
 
-#all-blogs h1 {
+#all-blogs h1, .profile-page h1, .profile-page h3 {
     text-align: center;
     color: #2e2e2e;
-    margin: 8rem 0 3rem 0;
+    margin: 7rem 0 3rem 0;
     font-family: 'Satisfy', cursive;
+}
+
+.profile-page h1 {
+    /*font-family: 'Otomanopee One', cursive;*/
+    margin: 3rem 0 2rem 0;
 }
 
 .grid {

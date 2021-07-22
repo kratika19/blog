@@ -15,14 +15,21 @@ def all_blogs(request):
     blogs = Blog.objects.all().order_by("-date")
     return render(request, 'blogs/all_blogs.html', {
         'blogs': blogs,
+        'show_delete': False
     })
+
+
+def delete_blog(request, pk):
+    Blog.objects.get(id=pk).delete()
+    return redirect('all-blogs')
 
 
 @login_required
 def detail_blogs(request, pk):
     blog = Blog.objects.get(id=pk)
     return render(request, 'blogs/detail_blog.html', {
-        'blog': blog
+        'blog': blog,
+        'show_delete': True
     })
 
 
