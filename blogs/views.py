@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Blog, Author
+from .models import Blog
 from .forms import BlogForm, UserRegistrationsForm
 from datetime import date
 from django.contrib.auth.decorators import login_required
@@ -12,7 +12,7 @@ def home(request):
 
 
 def all_blogs(request):
-    blogs = Blog.objects.all()
+    blogs = Blog.objects.all().order_by("-date")
     return render(request, 'blogs/all_blogs.html', {
         'blogs': blogs,
     })
@@ -30,14 +30,10 @@ def detail_blogs(request, pk):
 def write_blog(request):
     if request.method == 'POST':
         form = BlogForm(request.POST)
-
         if form.is_valid():
-            new_author = Author(user_name=request.user.username,
-                                email=request.user.email)
-            new_author.save()
-            print("Author = ", request.user.email)
-            new_blog = Blog(author=new_author, title=request.POST['title'],
-                            excerpt=request.POST['excerpt'], content=request.POST['content'], date=date.today())
+            new_blog = Blog(author=request.user, title=request.POST['title'],
+                            excerpt=request.POST['excerpt'], content=request.POST['content'],
+                            date=date.today())
             new_blog.save()
             return redirect('all-blogs')
         else:
@@ -48,6 +44,14 @@ def write_blog(request):
     form = BlogForm()
     return render(request, 'blogs/create.html', {
         'form': form
+    })
+
+
+@login_required
+def profile(request):
+    blogs = Blog.objects.filter(author=request.user)
+    return render(request, 'blogs/profile.html', {
+        'blogs': blogs
     })
 
 

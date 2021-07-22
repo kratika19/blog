@@ -5,4 +5,3 @@ from .models import *
 
 # kratika sagar
 admin.site.register(Blog)
-admin.site.register(Author)

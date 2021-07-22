@@ -1,0 +1,33 @@
+{% extends 'blogs/base.html' %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="#">
+{% endblock %}
+
+{% block content %}
+    <main>
+        <div class="profile-page">
+            <div class="profile-heading">
+                <h1>~ Your Profile ~</h1>
+            </div>
+            <div class="profile-intro">
+                <p>Name : {{ request.user | capfirst }}</p>
+                <p>Email : {{ request.user.email }}</p>
+            </div>
+            <div class="profile-content">
+                <h1>Your Blogs</h1>
+                <ul>
+                    {% for blog in blogs %}
+                        <li>{{ blog.title | capfirst }}</li>
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+        </div>
+    </main>
+{% endblock %}
