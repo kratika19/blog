@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Patrick+Hand&family=Satisfy&display=swap');
-
+main{
+    min-height:100vh;
+    height:100%;
+}
 .profile-page {
     display: flex;
     flex-direction: column;
@@ -7,13 +10,16 @@
     justify-content: center;
 }
 
-.profile-intro {
-    background-color: rgba(153, 24, 24, 0.82);
+.contain {
+    text-align: center;
+    background-color: rgb(233 127 112);
+    margin-top:3rem;
     padding: 4rem;
     border-radius: 10px;
     font-size: 1.5rem;
     box-shadow: 0 1px 5px 5px rgba(0, 0, 0, 0.2);
-    color: #fff;
+    color: #290606;
+    font-weight: bold;
     font-family: 'Patrick Hand', sans-serif;
     margin-bottom: 0;
 }

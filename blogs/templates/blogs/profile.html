@@ -5,7 +5,9 @@
 {% endblock %}
 
 {% block css_files %}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="{% static 'css/all_blogs.css' %}?{% now "U" %}">
     <link rel="stylesheet" href="{% static 'css/profile.css' %}?{% now "U" %}">
 {% endblock %}
@@ -17,12 +19,25 @@
                 <h1>~ Blogs by {{ request.user | capfirst }} ~</h1>
             </div>
             <div class="profile-content">
-                <div class="grid">
-                    {% for blog in blogs %}
-                        {% include 'blogs/includes/blogCard.html' %}
-                    {% endfor %}
-                </div>
-
+                {% if blogs %}
+                    <div class="grid">
+                        {% for blog in blogs %}
+                            {% include 'blogs/includes/blogCard.html' %}
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div class="contain">
+                        <h4>You have not written any blog yet!</h4>
+                        <p>Write a blog now!!</p>
+                        <div class="btn-wrapper">
+                            <a href="{% url 'write_blog' %}">
+                                <Button>
+                                    Write a Blog
+                                </Button>
+                            </a>
+                        </div>
+                    </div>
+                {% endif %}
             </div>
         </div>
     </main>
