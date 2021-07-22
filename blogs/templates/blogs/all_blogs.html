@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block css_files %}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}?{% now "U" %}">
     <link rel="stylesheet" href="{% static 'css/all_blogs.css' %}?{% now "U" %}">
 {% endblock %}
 
@@ -13,10 +14,24 @@
 {% block content %}
     <section id="all-blogs">
         <h1>~ All blogs ~</h1>
-        <div class="grid">
-            {% for blog in blogs %}
-                {% include 'blogs/includes/blogCard.html' %}
-            {% endfor %}
-        </div>
+        {% if blogs %}
+            <div class="grid">
+                {% for blog in blogs %}
+                    {% include 'blogs/includes/blogCard.html' %}
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="contain">
+                <h4>There are no blogs to display now!</h4>
+                <p>Write a blog now!!</p>
+                <div class="btn-wrapper">
+                    <a href="{% url 'write_blog' %}">
+                        <Button>
+                            Write a Blog
+                        </Button>
+                    </a>
+                </div>
+            </div>
+        {% endif %}
     </section>
 {% endblock %}

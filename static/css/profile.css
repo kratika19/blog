@@ -24,3 +24,8 @@ main{
     font-family: 'Patrick Hand', sans-serif;
     margin-bottom: 0;
 }
+
+#all-blogs .contain{
+    margin: 0 auto;
+    width: 30rem;
+}
