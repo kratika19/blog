@@ -12,7 +12,7 @@
 {% block content %}
     <main>
         <section class="content">
-            <h2>~ Login to your Account ~</h2>
+            <h2>~ Login ~</h2>
             <form action="{% url 'login' %}" method="POST" class="my-form">
                 {% csrf_token %}
                 {% for field in form %}
